@@ -1,0 +1,94 @@
+// src/components/BottomSheet.css
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 2px solid rgb(255, 196, 192); 
+}
+.handle {
+  width: 40px;
+  height: 6px;
+  background-color: #ccc;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content {
+  padding: 20px;
+  border: 1px solid blueviolet;
+}
+
+.buttons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation classes for smooth transitions */
+.bottom-sheet.closed {
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.bottom-sheet.quarter-open {
+  transform: translateY(75%);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.bottom-sheet.half-open {
+  transform: translateY(50%);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.bottom-sheet.three-quarter-open {
+  transform: translateY(25%);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.bottom-sheet.fully-open {
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .bottom-sheet {
+    border: 1px solid rgb(192, 255, 215); /* Reduce border thickness */
+    max-height: 80vh; /* Reduce the max height for smaller screens */
+  }
+  
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: center;
+  }
+}
