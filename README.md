@@ -28,7 +28,8 @@ Before you begin, ensure you have the following software installed on your machi
 1. Clone the repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/react-bottom-sheet-app.git
+https://github.com/tropnicates/frontend-animtaion
+
 Navigate to the project directory:
 
 bash
