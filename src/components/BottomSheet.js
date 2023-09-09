@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './BottomSheet.css';
 
+const snapPoints = ['closed', 'quarter-open', 'half-open', 'three-quarter-open', 'fully-open'];
+
 const BottomSheet = () => {
-  const snapPoints = ['closed', 'quarter-open', 'half-open', 'three-quarter-open', 'fully-open'];
   const [position, setPosition] = useState('closed');
 
   const handleButtonClick = (newPosition) => {
@@ -13,7 +14,7 @@ const BottomSheet = () => {
     <div className={`bottom-sheet ${position}`}>
       <div className="handle" />
       <div className="content">
-        <p>Sample Content</p>
+        <p>Moving Part</p>
       </div>
       <div className="buttons">
         {snapPoints.map((snapPoint) => (
